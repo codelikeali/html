@@ -1,0 +1,21 @@
+<label>password :
+    <input name="password" id="password" type="password" />
+</label>
+<br>
+<label>confirm password:
+    <input type="password" name="confirm_password" id="confirm_password" /> <span id='message'></span>
+    <input type="submit" class="submit" id="submit" value="submit">
+   
+   
+   <script>
+   
+ $('#password, #confirm_password').on('keyup', function () {
+    if ($('#password').val() == $('#confirm_password').val()) {
+        $('#message').html('Matching').css('color', 'green');
+    } else 
+        $('#message').html('Not Matching').css('color', 'red');
+        $('#submit').attr('disabled','disabled')
+        
+});
+
+</script>
